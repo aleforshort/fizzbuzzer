@@ -1,29 +1,30 @@
 $ (document).ready(function() {
-	prompt('Enter number 1 - 100', '');
-});
+
+function FizzBuzzer() {
+
+var userInput= parseInt(prompt('Enter number 1 - 100', ''));
 
 
-var DEBUG_MODE = true;
 
-var debug = function(msg) {
-    if (DEBUG_MODE == true) {
-        console.log("DEBUG:", msg);
-    }
-}
-
-for (var i=1; i<=100; i++){
-	if (i % 3 ==0 && i % 5==0){
-		debug("fizzbuzz",i);
+for (userInput; userInput<=100; userInput++){
+	if (userInput % 3 ==0 && userInput % 5==0){
+		$(".numberinput").append("<li>fizzbuzz</li>");
 	}
-		else if (i % 3==0){
-		debug("fizz",i);	
+		else if (userInput % 3==0){
+		$(".numberinput").append("<li>fizz</li>");	
 	}
-		else if (i % 5==0){
-		debug("buzz",i);	
+		else if (userInput % 5==0){
+		$(".numberinput").append("<li>buzz</li>");	
 	}
 
 	else {
-		debug(i);
+		$(".numberinput").append("<li>" + userInput + "</li>");
 	}
+
+
+}
 }
 
+FizzBuzzer ();
+
+});
