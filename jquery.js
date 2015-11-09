@@ -2,7 +2,7 @@ $ (document).ready(function() {
 
 function FizzBuzzer() {
 
-var userInput= parseInt(prompt('Enter number 1 - 100', ''));
+var userInput= parseInt(prompt('Enter number 1 - 100', ''),10);
 
 
 
